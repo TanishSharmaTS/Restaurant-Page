@@ -2,9 +2,8 @@ import "./style.css"
 import {createMenuPage} from "./menu.js"
 import {createHomePage} from "./home.js"
 import {getCurrentPage} from "./pageloader.js";
+import { createAboutPage} from "./about.js";
 
-
-const htmlContent = document.querySelector('#content')
 
 function updatePage(){
     document.querySelector('#content').textContent = ''
@@ -14,7 +13,7 @@ function updatePage(){
         createMenuPage()
     }
     else if(currentPage == 'About'){
-        htmlContent.textContent = 'AboutPage'
+        createAboutPage()
     }
     else{
         createHomePage()
